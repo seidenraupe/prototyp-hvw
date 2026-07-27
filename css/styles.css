@@ -804,6 +804,81 @@ ul { margin: 0; padding: 0; list-style: none; }
   .pub-item { grid-template-columns: 1fr; }
 }
 
+/* ── Sammlung portfolio ── */
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--color-line);
+}
+
+.collection-card {
+  border-right: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.collection-card:nth-child(3n) { border-right: none; }
+.collection-card:nth-last-child(-n+3) { border-bottom: none; }
+
+.collection-card__img {
+  aspect-ratio: 4/3;
+  background: #e8e8e8;
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+.collection-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-card__img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.collection-card__body { padding: var(--space-md); }
+
+.collection-card__title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--space-xs);
+}
+
+.collection-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .collection-grid { grid-template-columns: repeat(2, 1fr); }
+  .collection-card { border-right: 1px solid var(--color-line); }
+  .collection-card:nth-child(3n) { border-right: 1px solid var(--color-line); }
+  .collection-card:nth-child(2n) { border-right: none; }
+  .collection-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--color-line); }
+  .collection-card:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+@media (max-width: 600px) {
+  .collection-grid { grid-template-columns: 1fr; }
+  .collection-card,
+  .collection-card:nth-child(2n),
+  .collection-card:nth-child(3n) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .collection-card:last-child { border-bottom: none; }
+}
+
 /* ── Mobile sticky bar ── */
 
 .mobile-sticky {
