@@ -125,18 +125,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: 1.3;
   flex-shrink: 0;
+  line-height: 0;
 }
 
 .logo:hover { opacity: 1; }
-.logo span { display: block; }
+
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
 
 .nav-desktop {
   display: flex;
