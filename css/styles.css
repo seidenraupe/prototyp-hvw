@@ -678,6 +678,36 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .info-box p:last-child { margin-bottom: 0; }
 
+/* ── Webling-Anmeldeformular (iframe-Embed) ──
+   Das Formular wird eingebettet statt in einem neuen Tab geöffnet, damit
+   die Besucherin/der Besucher nach dem Absenden weiterhin auf der
+   HVW-Website bleibt (Webling selbst bietet keine Weiterleitungs-Option
+   nach dem Abschicken des Formulars). */
+
+#anmeldeformular {
+  /* Damit die Überschrift beim Ankersprung nicht unter dem sticky Header
+     verschwindet. */
+  scroll-margin-top: calc(var(--nav-height) + var(--space-md));
+}
+
+.webling-embed {
+  border: 1px solid var(--color-line);
+  min-height: 900px;
+}
+
+.webling-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 900px;
+  border: none;
+}
+
+.webling-embed__back {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
 /* ── Stats row ── */
 
 .stats-row {
