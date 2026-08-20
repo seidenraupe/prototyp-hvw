@@ -26,14 +26,14 @@ Dann: http://localhost:8080
 | Publikationen | `publikationen.html` | Neujahrsblatt, Reihen |
 | Über uns | `ueber-uns.html` | Verein, Vorstand, Geldgeber |
 | Stimmen | `zitate.html` | Zitate von historymatters.ch |
-| Mitmachen | `mitmachen.html` | Mitgliedschaft, Anmeldeformular (Webling-iFrame) |
+| Mitmachen | `mitmachen.html` | Mitgliedschaft, Anmeldeformular (Webling-iFrame), Ehrenamt |
 
 ## Technische Anbindungen (Prototyp)
 
 - **Eventfrog:** Live-Embed auf `agenda.html` (Programm-Vorschau auf `index.html` per `data/home-events.json`, siehe unten)
 - **Webling:** Das echte Anmeldeformular (`https://hvwinterthur.webling.ch/forms/memberform/d9e980cf304ee928a7e5`) ist per iFrame auf `mitmachen.html#anmeldeformular` eingebettet. Alle „Beitreten“-Buttons (Startseite und Mitmachen-Seite) verlinken auf diesen Anker. Der iFrame-Ansatz wurde gewählt, weil Webling selbst keine Weiterleitung nach dem Absenden konfigurieren lässt — so bleibt die Besucherin/der Besucher immer auf der HVW-Website.
   - Anmeldungen über das Formular werden in Webling automatisch der Gruppe **„Neue Mitglieder-Anmeldung (aus Website)“** zugeteilt (Konfiguration direkt im Webling-Formular-Editor, nicht im Code dieser Website). Ein:e Administrator:in prüft die Anmeldung und überträgt sie manuell in die Liste der aktiven Mitglieder (u. a. für die Rechnungsstellung des Mitgliederbeitrags). Da unser Embed lediglich das Formular unter der bestehenden URL anzeigt, übernimmt es diese Weiterleitungsregel automatisch — es sind keine Code-Änderungen nötig, wenn sich die Zielgruppe in Webling ändert. Die Website-Texte (`mitmachen.html`, `index.html`) weisen Besucher:innen entsprechend darauf hin, dass die Anmeldung erst nach manueller Prüfung aktiv wird.
-- **Mitmach-Formulare (Startseite):** Unterhalb der Mitgliedschafts-Karten auf `index.html` gibt es drei Ehrenamts-Boxen im gleichen Karten-Layout wie die Mitgliedschaften (Mörsburg-Führungen, Sammlung, Vorstand). Der Button **«bin interessiert»** öffnet darunter ein Formular; beim Absenden geht eine `mailto:`-Mail an `info@hvwinterthur.ch` mit Betreff aus der gewählten Box.
+- **Mitmach-Formulare:** Unterhalb der Mitgliedschafts-Karten auf `index.html` und unterhalb der Webling-Anmeldung auf `mitmachen.html` gibt es drei Ehrenamts-Boxen im gleichen Karten-Layout wie die Mitgliedschaften (Mörsburg-Führungen, Sammlung, Vorstand). Der Button **«bin interessiert»** öffnet darunter ein Formular; beim Absenden geht eine `mailto:`-Mail an `info@hvwinterthur.ch` mit Betreff aus der gewählten Box.
 - **WordPress:** Geplante Umsetzung; dieser Prototyp dient als Design- und UX-Referenz
 
 ## Startseiten-Veranstaltungen (Eventfrog Public API)
