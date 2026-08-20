@@ -37,13 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const newsletterForm = document.querySelector('.newsletter-form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', e => {
+  document.querySelectorAll('.volunteer-form').forEach((form) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Prototyp: Newsletter-Anmeldung würde hier angebunden werden.');
+
+      const subject = form.dataset.subject || 'Mitmachen';
+      const data = new FormData(form);
+      const body = [
+        `Vorname: ${data.get('vorname') || ''}`,
+        `Name: ${data.get('name') || ''}`,
+        `E-Mail: ${data.get('email') || ''}`,
+        `Telefonnummer: ${data.get('telefon') || ''}`,
+        `Beste Erreichbarkeit: ${data.get('erreichbarkeit') || ''}`,
+      ].join('\n');
+
+      // Prototyp ohne Backend: öffnet das lokale Mailprogramm mit vorausgefülltem
+      // Empfänger, Betreff (aus der jeweiligen Mitmach-Box) und Nachrichtentext.
+      // In der WordPress-Umsetzung durch ein serverseitiges Formular ersetzen.
+      window.location.href =
+        'mailto:info@hvwinterthur.ch' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
     });
-  }
+  });
 
   loadHomeEvents();
 });
