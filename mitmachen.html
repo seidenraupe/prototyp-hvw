@@ -144,6 +144,85 @@
       </div>
     </section>
 
+    <section class="section grid-line" id="weitere-mitmach-moeglichkeiten">
+      <div class="container">
+        <h2 style="margin-bottom:1.5rem;">Weitere Mitmach-Möglichkeiten</h2>
+        <div class="membership-grid volunteer-options">
+          <div class="membership-card">
+            <div class="membership-card__type">Ehrenamt</div>
+            <div class="volunteer-option__title">Helfer:in bei Führungen in der Mörsburg</div>
+            <p class="volunteer-option__lead">Schlossführungen auf der Mörsburg mittragen.</p>
+            <button
+              type="button"
+              class="btn-secondary volunteer-open"
+              data-subject="Mitmachen: Helfer:in bei Führungen in der Mörsburg"
+              aria-controls="volunteer-form-panel">
+              bin interessiert
+            </button>
+          </div>
+          <div class="membership-card">
+            <div class="membership-card__type">Ehrenamt</div>
+            <div class="volunteer-option__title">Helfer:in bei der Pflege und Archivierung in der Sammlung</div>
+            <p class="volunteer-option__lead">Sammlungsbestände pflegen und archivieren.</p>
+            <button
+              type="button"
+              class="btn-secondary volunteer-open"
+              data-subject="Mitmachen: Helfer:in bei der Pflege und Archivierung in der Sammlung"
+              aria-controls="volunteer-form-panel">
+              bin interessiert
+            </button>
+          </div>
+          <div class="membership-card">
+            <div class="membership-card__type">Ehrenamt</div>
+            <div class="volunteer-option__title">Mitarbeit im Vorstand</div>
+            <p class="volunteer-option__lead">Den Verein im Vorstand mitgestalten.</p>
+            <button
+              type="button"
+              class="btn-secondary volunteer-open"
+              data-subject="Mitmachen: Mitarbeit im Vorstand"
+              aria-controls="volunteer-form-panel">
+              bin interessiert
+            </button>
+          </div>
+        </div>
+
+        <div class="volunteer-form-panel" id="volunteer-form-panel" hidden>
+          <h3 class="volunteer-form-panel__title" id="volunteer-form-title"></h3>
+          <form class="volunteer-form">
+            <div class="volunteer-form__fields">
+              <label>
+                <span>Vorname</span>
+                <input type="text" name="vorname" required autocomplete="given-name">
+              </label>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required autocomplete="family-name">
+              </label>
+              <label>
+                <span>E-Mail</span>
+                <input type="email" name="email" required autocomplete="email">
+              </label>
+              <label>
+                <span>Telefonnummer</span>
+                <input type="tel" name="telefon" required autocomplete="tel">
+              </label>
+              <label class="volunteer-form__span">
+                <span>Beste Erreichbarkeit</span>
+                <input type="text" name="erreichbarkeit" required placeholder="z. B. Werktags ab 17 Uhr">
+              </label>
+            </div>
+            <div class="volunteer-form__actions">
+              <button type="submit" class="btn-cta">Absenden</button>
+              <button type="button" class="btn-secondary volunteer-form-cancel">Abbrechen</button>
+            </div>
+          </form>
+        </div>
+        <p class="volunteer-note">
+          Alle Mitmach-Möglichkeiten beruhen auf ehrenamtlicher und nicht entschädigter Basis.
+        </p>
+      </div>
+    </section>
+
     <section class="section grid-line">
       <div class="container">
         <h2 style="margin-bottom:1rem;">Spenden</h2>
