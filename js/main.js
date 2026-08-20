@@ -37,12 +37,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.querySelectorAll('.volunteer-form').forEach((form) => {
-    form.addEventListener('submit', (e) => {
+  const volunteerPanel = document.getElementById('volunteer-form-panel');
+  const volunteerForm = volunteerPanel && volunteerPanel.querySelector('.volunteer-form');
+  const volunteerTitle = document.getElementById('volunteer-form-title');
+  const volunteerOpenButtons = document.querySelectorAll('.volunteer-open');
+
+  function closeVolunteerForm() {
+    if (!volunteerPanel || !volunteerForm) return;
+    volunteerPanel.hidden = true;
+    volunteerForm.reset();
+    volunteerOpenButtons.forEach((btn) => {
+      btn.closest('.membership-card')?.classList.remove('is-selected');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  volunteerOpenButtons.forEach((btn) => {
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', () => {
+      if (!volunteerPanel || !volunteerForm || !volunteerTitle) return;
+
+      volunteerOpenButtons.forEach((other) => {
+        other.closest('.membership-card')?.classList.remove('is-selected');
+        other.setAttribute('aria-expanded', 'false');
+      });
+
+      btn.closest('.membership-card')?.classList.add('is-selected');
+      btn.setAttribute('aria-expanded', 'true');
+      volunteerForm.dataset.subject = btn.dataset.subject || 'Mitmachen';
+      volunteerTitle.textContent = btn.dataset.subject || 'Mitmachen';
+      volunteerPanel.hidden = false;
+      volunteerPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      volunteerForm.querySelector('input')?.focus();
+    });
+  });
+
+  document.querySelector('.volunteer-form-cancel')?.addEventListener('click', closeVolunteerForm);
+
+  if (volunteerForm) {
+    volunteerForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const subject = form.dataset.subject || 'Mitmachen';
-      const data = new FormData(form);
+      const subject = volunteerForm.dataset.subject || 'Mitmachen';
+      const data = new FormData(volunteerForm);
       const body = [
         `Vorname: ${data.get('vorname') || ''}`,
         `Name: ${data.get('name') || ''}`,
@@ -53,13 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Prototyp ohne Backend: öffnet das lokale Mailprogramm mit vorausgefülltem
       // Empfänger, Betreff (aus der jeweiligen Mitmach-Box) und Nachrichtentext.
-      // In der WordPress-Umsetzung durch ein serverseitiges Formular ersetzen.
       window.location.href =
         'mailto:info@hvwinterthur.ch' +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
     });
-  });
+  }
 
   loadHomeEvents();
 });
