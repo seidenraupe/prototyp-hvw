@@ -556,35 +556,46 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.04em;
 }
 
-.volunteer-grid {
-  display: grid;
+.volunteer-options {
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid var(--color-line);
 }
 
-.volunteer-card {
-  padding: var(--space-md);
-  border-right: 1px solid var(--color-line);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.volunteer-card:last-child { border-right: none; }
-
-.volunteer-card__title {
-  font-size: 0.95rem;
+.volunteer-option__title {
+  font-size: 1.15rem;
   font-weight: 600;
-  line-height: 1.35;
-  margin: 0;
+  line-height: 1.3;
+  margin-bottom: var(--space-sm);
+  flex: 0 0 auto;
 }
 
-.volunteer-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+.volunteer-option__lead {
+  font-size: 0.85rem;
+  color: var(--color-muted);
   flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.volunteer-options .membership-card.is-selected {
+  background: #f8f8f8;
+}
+
+.volunteer-form-panel {
+  margin-top: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-line);
+  border-top: none;
+}
+
+.volunteer-form-panel__title {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.volunteer-form__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .volunteer-form label {
@@ -615,9 +626,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   outline-offset: 1px;
 }
 
-.volunteer-form .btn-secondary {
-  margin-top: auto;
-  align-self: flex-start;
+.volunteer-form__span {
+  grid-column: 1 / -1;
+}
+
+.volunteer-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
 }
 
 .volunteer-note {
@@ -627,12 +643,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 900px) {
-  .volunteer-grid { grid-template-columns: 1fr; }
-  .volunteer-card {
-    border-right: none;
-    border-bottom: 1px solid var(--color-line);
-  }
-  .volunteer-card:last-child { border-bottom: none; }
+  .volunteer-options { grid-template-columns: 1fr; }
+  .volunteer-options .membership-card:nth-child(2) { border-right: none; }
+  .volunteer-form__fields { grid-template-columns: 1fr; }
 }
 
 /* ── Page header ── */
