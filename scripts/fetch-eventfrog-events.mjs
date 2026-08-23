@@ -63,11 +63,12 @@ function pickLang(field) {
   return field.de || field.en || field.fr || '';
 }
 
-/** OpenAPI: Event.image is { url, width?, height? } */
+/** Eventfrog Public API: emblemToShow is the event image shown in the widget. */
 function pickImage(event) {
   if (!event || typeof event !== 'object') return '';
 
   const candidates = [
+    event.emblemToShow?.url,
     event.image?.url,
     event.imageUrl,
     event.imageURL,

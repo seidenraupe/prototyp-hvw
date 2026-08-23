@@ -38,7 +38,7 @@ Dann: http://localhost:8080
 
 ## Startseiten-Veranstaltungen (Eventfrog Public API)
 
-Die 3 nächsten Veranstaltungen auf `index.html` werden **nicht** live per iFrame geladen, sondern aus `data/home-events.json` gerendert (siehe `js/main.js`). Diese Datei wird von `scripts/fetch-eventfrog-events.mjs` erzeugt, das die authentifizierte Eventfrog Public API für die Organisationen Museum Schaffen, Museum Lindengut und Schloss Mörsburg (`orgId` 4936116, 5116588, 5137433) abfragt und die 3 nächsten Termine schreibt. Fehlende Event-Bilder werden per `og:image` der Eventfrog-Seite ergänzt.
+Die 3 nächsten Veranstaltungen auf `index.html` werden **nicht** live per iFrame geladen, sondern aus `data/home-events.json` gerendert (siehe `js/main.js`). Diese Datei wird von `scripts/fetch-eventfrog-events.mjs` erzeugt, das die authentifizierte Eventfrog Public API für die Organisationen Museum Schaffen, Museum Lindengut und Schloss Mörsburg (`orgId` 4936116, 5116588, 5137433) abfragt und die 3 nächsten Termine schreibt. Eventbilder kommen aus dem API-Feld `emblemToShow`; fehlt das Bild dort, wird `og:image` der Eventfrog-Seite verwendet. Die Startseiten-Karten zeigen dieses Bild über Datum und Titel.
 
 Aktualisierung erfolgt automatisch täglich über `.github/workflows/update-eventfrog-events.yml` (gleicher Ablauf wie in [prototype-hvw-website](https://github.com/seidenraupe/prototype-hvw-website)). Dafür muss im Repository unter **Settings → Secrets and variables → Actions** ein gültiges Secret `EVENTFROG_API_KEY` (Eventfrog Public API Key) hinterlegt sein. Manuell ausführen:
 
