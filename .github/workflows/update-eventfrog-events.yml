@@ -17,6 +17,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Immer den aktuellen main holen — bei «Re-run» eines alten Jobs
+          # sonst der ursprüngliche Commit, und git push auf main scheitert.
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,5 +42,6 @@ jobs:
           else
             git add data/home-events.json
             git commit -m "chore: update homepage events from Eventfrog"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
