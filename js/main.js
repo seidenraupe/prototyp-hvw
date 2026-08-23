@@ -135,15 +135,29 @@ function renderHomeEventsStatus(container, text) {
   container.innerHTML = `<p class="events-preview__status">${escapeHtml(text)}</p>`;
 }
 
+function isHttpUrl(value) {
+  return typeof value === 'string' && /^https?:\/\//.test(value);
+}
+
 function renderEventCard(event) {
   const date = formatEventDate(event.begin);
   const href = event.url || 'agenda.html';
+  const title = event.title || '';
+  const image = isHttpUrl(event.image) ? event.image : '';
+  const imageMarkup = image
+    ? `<div class="event-card__image">
+        <img src="${escapeHtml(image)}" alt="${escapeHtml(title)}" width="400" height="225" loading="lazy">
+      </div>`
+    : '';
 
   return `
     <a href="${escapeHtml(href)}" class="event-card" target="_blank" rel="noopener">
-      <div class="event-card__date">${escapeHtml(date)}</div>
-      <div class="event-card__title">${escapeHtml(event.title || '')}</div>
-      <div class="event-card__meta">${escapeHtml(event.location || event.organizerName || '')}</div>
+      ${imageMarkup}
+      <div class="event-card__body">
+        <div class="event-card__date">${escapeHtml(date)}</div>
+        <div class="event-card__title">${escapeHtml(title)}</div>
+        <div class="event-card__meta">${escapeHtml(event.location || event.organizerName || '')}</div>
+      </div>
     </a>
   `;
 }
