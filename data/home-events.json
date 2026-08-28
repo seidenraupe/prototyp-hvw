@@ -1,16 +1,7 @@
 {
-  "generatedAt": "2026-08-27T16:01:34.678Z",
+  "generatedAt": "2026-08-28T17:05:28.906Z",
   "source": "eventfrog-public-api",
   "events": [
-    {
-      "id": "7478107357592992377",
-      "title": "Käfele mit der Kuratorin der Haldengut-Ausstellung",
-      "begin": "2026-08-28T14:00:00+02:00",
-      "url": "https://eventfrog.ch/de/p/fuehrungen-vortraege/tagungen-kolloquien/kaefele-mit-der-kuratorin-der-haldengut-ausstellung-7478107357592992377.html",
-      "organizerName": "Museum Schaffen",
-      "location": "Museum Schaffen, Winterthur",
-      "image": "https://res.eventfrog.net/production_res_public/kaefele-mit-der-kuratorin-uwzt8cuh-pa-CL6B1FKY.jpg"
-    },
     {
       "id": "7478164441667747459",
       "title": "Konzert: Lieder rund ums Bier (Tenor-Gesang + Piano)",
@@ -28,6 +19,15 @@
       "organizerName": "Museum Schaffen",
       "location": "Museum Schaffen, Winterthur",
       "image": "https://res.eventfrog.net/production_res_public/screenshot-2026-07-31-134556-HVEM4JCO.webp"
+    },
+    {
+      "id": "7488925189402530473",
+      "title": "PiMS - Pubquiz im Museum!",
+      "begin": "2026-09-24T19:00:00+02:00",
+      "url": "https://eventfrog.ch/de/p/freizeit-ausfluege/gruppen-spiele/pims-pubquiz-im-museum-7488925189402530473.html",
+      "organizerName": "Museum Schaffen",
+      "location": "Museum Schaffen, Winterthur",
+      "image": "https://res.eventfrog.net/production_res_public/screenshot-2026-07-31-135431-CRZN9T8J.webp"
     }
   ]
 }
