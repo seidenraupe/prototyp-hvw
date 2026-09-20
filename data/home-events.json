@@ -1,16 +1,7 @@
 {
-  "generatedAt": "2026-09-19T09:06:35.879Z",
+  "generatedAt": "2026-09-20T09:32:27.701Z",
   "source": "eventfrog-public-api",
   "events": [
-    {
-      "id": "7500530981436148053",
-      "title": "Erinnerungstank Haldengut",
-      "begin": "2026-09-19T10:00:00+02:00",
-      "url": "https://eventfrog.ch/de/p/kunst-ausstellungen/ausstellung/erinnerungstank-haldengut-7500530981436148053.html",
-      "organizerName": "Museum Schaffen",
-      "location": "Museum Schaffen, Winterthur",
-      "image": "https://res.eventfrog.net/haldengut-ausstellung-Z0GAC9E2.webp"
-    },
     {
       "id": "7500530981482285399",
       "title": "Erinnerungstank Haldengut",
@@ -25,6 +16,15 @@
       "title": "Erinnerungstank Haldengut",
       "begin": "2026-09-23T10:00:00+02:00",
       "url": "https://eventfrog.ch/de/p/kunst-ausstellungen/ausstellung/erinnerungstank-haldengut-7500530981524228441.html",
+      "organizerName": "Museum Schaffen",
+      "location": "Museum Schaffen, Winterthur",
+      "image": "https://res.eventfrog.net/haldengut-ausstellung-Z0GAC9E2.webp"
+    },
+    {
+      "id": "7500530981578754395",
+      "title": "Erinnerungstank Haldengut",
+      "begin": "2026-09-24T10:00:00+02:00",
+      "url": "https://eventfrog.ch/de/p/kunst-ausstellungen/ausstellung/erinnerungstank-haldengut-7500530981578754395.html",
       "organizerName": "Museum Schaffen",
       "location": "Museum Schaffen, Winterthur",
       "image": "https://res.eventfrog.net/haldengut-ausstellung-Z0GAC9E2.webp"
