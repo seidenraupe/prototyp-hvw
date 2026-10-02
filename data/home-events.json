@@ -1,16 +1,7 @@
 {
-  "generatedAt": "2026-10-01T11:16:55.813Z",
+  "generatedAt": "2026-10-02T10:49:21.380Z",
   "source": "eventfrog-public-api",
   "events": [
-    {
-      "id": "7500530981851384165",
-      "title": "Ausstellung: Erinnerungstank Haldengut",
-      "begin": "2026-10-01T10:00:00+02:00",
-      "url": "https://eventfrog.ch/de/p/kunst-ausstellungen/ausstellung/ausstellung-erinnerungstank-haldengut-7500530981851384165.html",
-      "organizerName": "Museum Schaffen",
-      "location": "Museum Schaffen, Winterthur",
-      "image": "https://res.eventfrog.net/haldengut-ausstellung-Z0GAC9E2.webp"
-    },
     {
       "id": "7500530981918493031",
       "title": "Ausstellung: Erinnerungstank Haldengut",
@@ -28,6 +19,15 @@
       "organizerName": "Museum Schaffen",
       "location": "Museum Schaffen, Winterthur",
       "image": "https://res.eventfrog.net/haldengut-ausstellung-Z0GAC9E2.webp"
+    },
+    {
+      "id": "7493980579811083005",
+      "title": "Ende gut, Haldengut, Industriekulturgut?",
+      "begin": "2026-10-03T10:00:00+02:00",
+      "url": "https://eventfrog.ch/de/p/fuehrungen-vortraege/fuehrung/ende-gut-haldengut-industriekulturgut-7493980579811083005.html",
+      "organizerName": "Historischer Verein Winterthur",
+      "location": "Haldengut-Areal, Winterthur",
+      "image": "https://res.eventfrog.net/objektwerkstadt-doku073-EYQDUV34.webp"
     }
   ]
 }
